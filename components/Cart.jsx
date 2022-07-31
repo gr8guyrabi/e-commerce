@@ -27,7 +27,7 @@ const Cart = () => {
 
         const data = await response.json()
         toast.loading('Redirecting...')
-        console.log(data)
+
         stripe.redirectToCheckout({ sessionId: data.id })
     }
 
